@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  list-style: none;
 }
 
 body {
@@ -13,8 +14,43 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  /*
-   * CSS image reference example.
-   */
-  background-image: url('./images/bg-pattern.png');
+  background-image: url('./images/background.jpg');
+  background-repeat: repeat;
+  max-width: 100%;
+}
+
+input {
+  width: 370px;
+  padding: 10px 5px;
+  float: left;
+  color: rgb(255, 244, 244);
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+
+input:focus {
+  outline: 0;
+  background: transparent;
+}
+.gallery {
+  margin: 0;
+  padding-top: 60px;
+}
+.photo-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.stats-item {
+  margin: 0;
+  padding-left: 20px;
 }
