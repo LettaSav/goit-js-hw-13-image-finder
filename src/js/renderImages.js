@@ -32,7 +32,7 @@ function onSearch(e) {
   const form = event.currentTarget;
   api.query = form.elements.query.value;
   imgGallery.innerHTML = '';
-  loadMoreBtn.hide();
+  loadMoreBtn.show();
   api.resetPage();
   loadImg();
   form.reset();
