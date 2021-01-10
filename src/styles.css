@@ -73,6 +73,7 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
   background-color: #9932cc;
+  margin-bottom: 20px;
 }
 
 .button.is-hidden {
