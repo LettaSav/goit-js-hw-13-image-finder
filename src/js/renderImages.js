@@ -46,7 +46,7 @@ function onSearch(e) {
   const form = event.currentTarget;
   api.query = form.elements.query.value;
   imgGallery.innerHTML = '';
-
+  loadMoreBtn.disable();
   api.resetPage();
   loadImg();
   form.reset();
