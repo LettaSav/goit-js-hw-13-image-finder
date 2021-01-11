@@ -2,6 +2,8 @@ import api from './apiService';
 import { error } from '@pnotify/core';
 import gallery from '../templates/gallery.hbs';
 import LoadMoreBtn from './load_more_btn';
+import * as basicLightbox from 'basiclightbox';
+import '../../node_modules/basiclightbox/dist/basicLightbox.min.css';
 
 import 'handlebars';
 
@@ -16,6 +18,16 @@ const loadMoreBtn = new LoadMoreBtn({
 searchForm.addEventListener('submit', onSearch);
 
 loadMoreBtn.refs.button.addEventListener('click', loadImg);
+
+imgGallery.addEventListener('click', openModal);
+
+function openModal(evt) {
+  const instance = basicLightbox.create(`
+    <img src = "${evt.target.dataset.source}" width = "100%" />
+    `);
+  instance.show();
+  console.log(evt.target.dataset.source);
+}
 
 function loadImg() {
   loadMoreBtn.disable();
