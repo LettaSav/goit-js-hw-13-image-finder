@@ -33,10 +33,6 @@ function loadImg() {
   loadMoreBtn.disable();
   api.fetchImages().then(imagesSearch).catch(onFetchError);
   loadMoreBtn.enable();
-  window.scrollTo({
-    top: document.documentElement.offsetHeight,
-    behavior: 'smooth',
-  });
 }
 
 function onSearch(e) {
@@ -49,6 +45,10 @@ function onSearch(e) {
   loadMoreBtn.disable();
   api.resetPage();
   loadImg();
+  window.scrollTo({
+    top: document.documentElement.offsetHeight,
+    behavior: 'smooth',
+  });
   form.reset();
 }
 
