@@ -78,18 +78,3 @@ const options = {
   rootMargin: '0px',
   threshold: 0.5,
 };
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const lazyImg = entry.target;
-      console.log(lazyImg);
-      observer.unobserve(lazyImg);
-    }
-  });
-}, options);
-
-const arr = document.querySelectorAll('img');
-arr.forEach(i => {
-  observer.observe(i);
-});
