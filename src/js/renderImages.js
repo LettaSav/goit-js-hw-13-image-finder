@@ -23,9 +23,8 @@ imgGallery.addEventListener('click', openModal);
 
 function openModal(evt) {
   const instance = basicLightbox.create(`
-    <img src = "${evt.target.dataset.source}" width = "100%"  alt = "${{
-    tags,
-  }}"/>
+    <img src = "${evt.target.dataset.source}" width = "100%"   
+    alt=" ${evt.target.alt}"/>
     `);
   instance.show();
   console.log(evt.target.dataset.source);
